@@ -1,34 +1,21 @@
-# Docker
-# Build a Docker image
-# https://docs.microsoft.com/azure/devops/pipelines/languages/docker
 
 trigger:
-- main
+- master
 
-resources:
-- repo: self
+pool:
+  vmImage: 'ubuntu-latest'
 
-variables:
-  tag: '$(Build.BuildId)'
+steps:
+- task: DockerInstaller@0
+  inputs:
+    dockerVersion: '17.09.0-ce'
 
-stages:
-- stage: Build
-  displayName: Build image
-  jobs:
-  - job: Build
-    displayName: Build
-    pool:
-      vmImage: ubuntu-latest
-    steps:
-    - task: Docker@2
-      displayName: Build an image
-      inputs:
-        command: build
-        dockerfile: '**/Dockerfile-run'
-        tags: |
-          $(tag)
-    - task: Docker@2
-      inputs:
-        containerRegistry: 'service-casestudy'
-        repository: 'msyazar/casestudy:latest'
-        command: 'push'
+- task: Docker@2
+  inputs:
+    containerRegistry: $(dockerHub)
+    repository: $(imageName)
+    command: 'buildAndPush'
+    tags: |
+      latest
+      $(Build.BuildNumber) 
+    Dockerfile: '**/Dockerfile-run'
