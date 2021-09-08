@@ -6,9 +6,15 @@ const PORT = process.env.PORT || 3000;
 const app = express();
 
 app.use(helmet());
+app.engine('html', require('ejs').renderFile);
+app.use(express.static(__dirname + '/images'));
 
-app.get('/', (req, res) => {
-   res.send('BestCloudForMe!');
+app.get('/', function(req, res) {
+    res.render('./index.html');
+});
+
+app.get('/bcfm', (req, res) => {
+   res.send('BESTCLOUDFOR.ME');
 });
 
 app.get('/live', (req, res) => res.status(200).json({ status: 'ok' }));
