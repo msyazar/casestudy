@@ -11,14 +11,9 @@ resources:
 variables:
   tag: '$(Build.BuildId)'
 
-stages:
-- stage: Build
-  displayName: Build image
-  jobs:
-    - job: Docker@2
-      displayName: Build an image
-      inputs:
-        command: 'build'
-        Dockerfile: 'Dockerfile-run'
-        buildContext: 
-        tags: '$(tag)'
+- task: Docker@2
+  inputs:
+    containerRegistry: 'casestudy'
+    command: 'buildAndPush'
+    Dockerfile: 'Dockerfile-run'
+    buildContext: 
