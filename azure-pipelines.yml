@@ -19,3 +19,13 @@ steps:
       latest
       $(Build.BuildNumber) 
     Dockerfile: '**/Dockerfile-run'
+
+- task: HelmDeploy@0
+  inputs:
+    connectionType: 'Kubernetes Service Connection'
+    kubernetesServiceConnection: 'service-kubernetes'
+    command: 'upgrade'
+    chartType: 'FilePath'
+    chartPath: 'chart/'
+    install: false
+    recreate: true
