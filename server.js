@@ -14,7 +14,7 @@ app.get('/', function(req, res) {
 });
 
 app.get('/bcfm', (req, res) => {
-   res.send('BESTCLOUDFOR.MEE');
+   res.send('BESTCLOUDFOR.ME');
 });
 
 app.get('/live', (req, res) => res.status(200).json({ status: 'ok' }));
