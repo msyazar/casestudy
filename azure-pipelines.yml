@@ -27,8 +27,8 @@ stages:
         dockerfile: '**/Dockerfile-run'
         tags: |
           $(tag)
-- task: Docker@2
-  inputs:
-    containerRegistry: 'service-casestudy'
-    repository: 'casestudy'
-    command: 'push'
+    - task: Docker@2
+      inputs:
+        containerRegistry: 'service-casestudy'
+        repository: 'casestudy'
+        command: 'push'
