@@ -1,7 +1,20 @@
+trigger:
+- master
+
+pool:
+  vmImage: 'ubuntu-latest'
+
+steps:
+- task: DockerInstaller@0
+  inputs:
+    dockerVersion: '17.09.0-ce'
+
 - task: Docker@2
   inputs:
-    containerRegistry: 'casestudy'
-    repository: 'casestudy'
+    containerRegistry: $(dockerHub)
+    repository: $(imageName)
     command: 'buildAndPush'
-    Dockerfile: 'Dockerfile-run'
-    buildContext: 
+    tags: |
+      latest
+      $(Build.BuildNumber) 
+    Dockerfile: '**/Dockerfile-run'
