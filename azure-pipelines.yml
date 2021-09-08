@@ -2,4 +2,4 @@
   inputs:
     containerRegistry: 'casestudy'
     command: 'buildAndPush'
-    Dockerfile: '**/Dockerfile-run'
+    Dockerfile: 'Dockerfile-run'
