@@ -11,8 +11,8 @@ steps:
 
 - task: Docker@2
   inputs:
-    containerRegistry: https://hub.docker.com/
-    repository: msyazar1/casestudy
+    containerRegistry: casestudy
+    repository: casestudy
     command: 'buildAndPush'
     tags: |
       latest
