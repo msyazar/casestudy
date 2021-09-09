@@ -62,7 +62,7 @@ Uygulama clone u alınarak docker image oluşturulur ve docker.hub a gönderilir
  8- Oluşturulan "Load Balancer" DNS bilgisi koopyalanarak "Route53" servisinde bir A kaydı oluşturulur ve Load Balancer seçilir.
  9- Browserdan https://msyazar.kalahari.cf/ girildiğinde sitenin geldiği görülür. 
  
-    ![image](https://user-images.githubusercontent.com/22852682/132679287-0bb97b49-cadd-4ed4-a689-892b83adddde.png)
+![image](https://user-images.githubusercontent.com/22852682/132680379-a85015f1-3ee6-4144-bd3d-08be8f0097bd.png)
 
 ```
 <b>Görev 4: CI/CD</b>
