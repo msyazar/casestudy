@@ -26,5 +26,5 @@ steps:
     kubernetesServiceConnection: 'service-kubernetes'
     command: 'upgrade'
     chartType: 'Name'
-    chartName: 'https://github.com/msyazar/casestudy/tree/main/chart'
+    chartName: 'https://github.com/msyazar/casestudy/blob/main/chart/nodeserver-1.0.0.tgz'
     releaseName: 'nodeserver'
