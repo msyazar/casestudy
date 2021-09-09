@@ -26,6 +26,7 @@ Helm chart kullanarak grafana yüklemek için:
 
 ```
 <b>Görev 3: Application</b>
+```
 Node.js uygulaması oluşturulur. github repo altında uygulama ve helm chart oluşturulmuş durumdadır. 
 Uygulama clone u alınarak docker image oluşturulur ve docker.hub a gönderilir. 
 1- git clone https://github.com/msyazar/casestudy.git
@@ -63,8 +64,9 @@ Uygulama clone u alınarak docker image oluşturulur ve docker.hub a gönderilir
  
     ![image](https://user-images.githubusercontent.com/22852682/132679287-0bb97b49-cadd-4ed4-a689-892b83adddde.png)
 
-
+```
 <b>Görev 4: CI/CD</b>
+```
 1- Azure devops üzerinden bir hesap oluşturulur. Yeni bir proje açılır ve bir pipeline oluşturulur.
 2- Azure devops üzerinde github, docker.hub ve kubernetes cluster için servisler oluşturulur.
 3- Gitgub repoda bulunan azure-pipelines.yml dosyası içeriği kopyalanarak pipeline güncellenir. 
@@ -72,10 +74,10 @@ Böylelikle github repoda yapılan değişiklik sonrası azure pipeline da sıra
  - Yeni docker image oluşturulur.
  - Docker.hub repo da image güncellenir.
  - helm char ile uygulama kubernetes cluster a deploy edilir.
-
+```
 <b>Görev 5: LB ve HTTP REQUEST</b>
-
+```
 Görev 3 te oluşturulan LB ve ingress.yaml içerisindeki config ile beraber sağlanmıştır.
 msyazar.kalahari.cf browserdan görüntülenebilir olmasına karşın msyazar2.kalahari.cf hata alacaktır.
- 
+```
  
