@@ -26,6 +26,6 @@ steps:
     kubernetesServiceConnection: 'service-kubernetes'
     command: 'upgrade'
     chartType: 'FilePath'
-    chartPath: '$(Build.ArtifactStagingDirectory)/chart' 
+    chartPath: '$(System.DefaultWorkingDirectory)/chart' 
     install: false
     recreate: true
