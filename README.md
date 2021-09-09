@@ -12,18 +12,7 @@ Cluster oluşturulduktan sonra oluşturulan node ların listelemek için
 ```
 <b>Görev 2: Monitoring</b>
 ```
-Helm chart kullanarak prometheus yüklemek için:
-1- kubectl create namespace prometheus
-2- kubectl config set-context --current --namespace=prometheus
-3- helm repo add prometheus-community https://prometheus-community.github.io/helm-charts
-4- helm install prometheus prometheus-community/prometheus --namespace=prometheus
-
-Helm chart kullanarak grafana yüklemek için:
-1- kubectl create namespace grafana
-2- kubectl config set-context --current --namespace=grafana
-3- helm repo add grafana https://grafana.github.io/helm-charts
-4- helm install grafana grafana/grafana --set adminPassword=PASSWORD --namespace=grafana
-
+Tamamlanmadı.
 ```
 <b>Görev 3: Application</b>
 ```
