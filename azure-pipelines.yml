@@ -19,14 +19,3 @@ steps:
       latest
       $(Build.BuildNumber) 
     Dockerfile: '**/Dockerfile-run'
-
-- task: HelmDeploy@0
-  inputs:
-    connectionType: 'Kubernetes Service Connection'
-    kubernetesServiceConnection: 'service-kubernetes'
-    command: 'upgrade'
-    chartType: 'Name'
-    chartName: 'https://github.com/msyazar/casestudy/tree/main/chart'
-    releaseName: 'nodeserver'
-    install: false
-    recreate: true
